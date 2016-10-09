@@ -1,6 +1,6 @@
 module.exports = {
   entry: [
-    'src/index.js'
+    './src/index.js'
   ],
   output: {
     path: __dirname,
@@ -9,7 +9,7 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.js$/,
+      test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'babel-loader',
       query: {
@@ -18,7 +18,7 @@ module.exports = {
     }]
   },
   resolve: {
-    resolve: { modulesDirectories: ['node_modules', 'src'], extension: ['', '.js', '.jsx'] }
+    extension: ['', '.js', '.jsx'] 
   },
   devServer: {
     historyApiFallback: true,

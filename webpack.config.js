@@ -18,7 +18,7 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    resolve: { modulesDirectories: ['node_modules', 'src'], extension: ['', '.js', '.jsx'] }
   },
   devServer: {
     historyApiFallback: true,
